@@ -72,3 +72,35 @@ let notRegex = /[^0-9]/g;
 let notResult = notString.match(notRegex);
 
 console.log(notResult);
+
+// If character occurs one or more times
+let difficultString = "Misssissippsi";
+let multInstanceRegex = /s+/g;
+let multiResult = difficultString.match(multInstanceRegex);
+
+console.log(multiResult);
+
+// If character occurs 0 or more times
+let soccerWord = "goooooooooal";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+
+soccerWord.match(goRegex);
+gPhrase.match(goRegex);
+oPhrase.match(goRegex);
+
+let chewie = "Aaaaaaaaaaaaaaaaaaaaarrrrgh!";
+let chewieRegex = /a*/i;
+let chewieResult = chewie.match(chewieRegex);
+
+console.log(chewieResult);
+
+// lazy match (?)
+let titanic = "titanic";
+let lazyRegex = /t[a-z]*?i/;
+console.log(titanic.match(lazyRegex));
+
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/;
+console.log(text.match(myRegex));
